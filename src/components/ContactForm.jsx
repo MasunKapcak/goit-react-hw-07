@@ -1,13 +1,13 @@
 import { useId } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import Styles from "./ContactForm.module.css"
-import { useDispatch,useSelector } from "react-redux";
-import { addContact} from "../redux/contactsOps";
+import Styles from "./ContactForm.module.css";
+import { useDispatch, useSelector } from "react-redux";
+import { addContact } from "../redux/contactsOps";
 
 const ContactForm = () => {
   const dispatch = useDispatch();
-  const contacts = useSelector(state => state.contacts.items);
+  const contacts = useSelector((state) => state.contacts.items);
 
   const nameFieldId = useId();
   const phoneFieldId = useId();
@@ -43,7 +43,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className={Styles["contact-form"]} >
+    <div className={Styles["contact-form"]}>
       <Formik
         initialValues={{
           username: "",
@@ -57,19 +57,33 @@ const ContactForm = () => {
             <div className={Styles["user-form"]}>
               <label htmlFor={nameFieldId}>Name</label>
               <Field type="text" name="username" id={nameFieldId} />
-              <ErrorMessage name="username" component="span" style={{ color: "red" }} />
+              <ErrorMessage
+                name="username"
+                component="span"
+                style={{ color: "red" }}
+              />
             </div>
 
-            <div style={{ display: "flex", flexDirection: "column", marginBottom: "10px" }}>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                marginBottom: "10px",
+              }}
+            >
               <label htmlFor={phoneFieldId}>Phone</label>
               <Field type="text" name="phone" id={phoneFieldId} />
-              <ErrorMessage name="phone" component="span" style={{ color: "red" }} />
+              <ErrorMessage
+                name="phone"
+                component="span"
+                style={{ color: "red" }}
+              />
             </div>
 
             <button
               type="submit"
               style={{
-                backgroundColor: "#4caf50",
+                backgroundColor: "#8f36f4",
                 color: "white",
                 border: "none",
                 padding: "10px 15px",
@@ -85,6 +99,5 @@ const ContactForm = () => {
     </div>
   );
 };
-
 
 export default ContactForm;

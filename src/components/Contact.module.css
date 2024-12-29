@@ -1,42 +1,43 @@
-.contact{
-    margin: 10px 10px ;
-    width: 250px;
-    border: 1px solid rgb(179, 160, 160);
-    border-radius: 2px;
+.contact {
+  margin: 10px 10px;
+  width: 250px;
+  border: 1px solid rgb(179, 160, 160);
+  border-radius: 2px;
 }
 
-.userp,.phonep{
-    margin: 0;
+.userp,
+.phonep {
+  margin: 0;
 }
 
-.contact-note{
-    display: flex;
-    flex-direction: column;
-    gap:5px;
+.contact-note {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
-.contact-content{
-    display: flex; 
-    flex-direction: row; 
-    justify-content: space-between;
-    align-items: center;
-}
-
-.contact-name{
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
+.contact-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.contact-phone{
-    display: flex;
-    align-items: center;
+.contact-name {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
 }
 
-.delete-button{
-    background-color: #f44336;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
+.contact-phone {
+  display: flex;
+  align-items: center;
+}
+
+.delete-button {
+  background-color: #8f36f4;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
 }
